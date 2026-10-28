@@ -1,0 +1,83 @@
+# ==========================================
+# FRAMS - Financial Risk Assessment and Micro-Lending System
+# Git Ignore Configuration
+# ==========================================
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# Python virtual environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Local database exports; keep versioned migrations under database/migrations/
+/database/*.sql
+
+# Local credentials and private configuration
+*.local
+*.local.*
+*.secret
+*.secrets
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+secrets.yml
+secrets.yaml
+
+# Uploaded documents and private borrower files
+/lending_system/uploads/*
+!/lending_system/uploads/.htaccess
+!/lending_system/uploads/loan_documents/
+/lending_system/uploads/loan_documents/*
+!/lending_system/uploads/loan_documents/.htaccess
+
+# Local-only test captures, reports, and manuscript materials
+/frams_private/
+/_frams_revision/
+/manuscript_revision/
+/testing/
+/testing_evidence/
+/lending_system/documentation/
+/lending_system/tools/
+/lending_system/debug_*.php
+/lending_system/inspect_*.php
+/lending_system/tmp_*.php
+/test_prepend_check.php
+/Lending Management System - Desktop Setup Guide.docx
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+/tmp_debug.php
+/audit_results.txt
+
+# Audit and temporary scripts
+/modal_audit.py
+/lending_system/query_users_sample.php
+/lending_system/query*
+
+# IDE settings
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary test and cache files
+.phpunit.cache/
+.phpunit.result.cache
+coverage/
